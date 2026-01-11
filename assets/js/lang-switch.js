@@ -1,3 +1,5 @@
+document.addEventListener('DOMContentLoaded', () => {
+
   const btnRu = document.getElementById('btn-ru');
   const btnEn = document.getElementById('btn-en');
   const btnLv = document.getElementById('btn-lv');
@@ -48,3 +50,5 @@
 
   // Изначальное состояние
   activateLang('ru');
+
+});
