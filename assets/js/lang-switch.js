@@ -1,5 +1,4 @@
-<script>
-  const btnRu = document.getElementById('btn-ru');
+const btnRu = document.getElementById('btn-ru');
   const btnEn = document.getElementById('btn-en');
   const btnLv = document.getElementById('btn-lv');
 
@@ -60,4 +59,4 @@
     fbq('track', 'Lead');
     fbq('trackCustom', 'Checkout_DiveInn');
   }
-</script>
+
