@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Scubapro GoTravel — обзор от SSI-инструктора</title>
+
+  <!-- Facebook Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n; n.push=n; n.loaded=!0; n.version='2.0';
+    n.queue=[]; t=b.createElement(e); t.async=!0;
+    t.src=v; s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '675997335920840');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=675997335920840&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Facebook Pixel Code -->
+
+  <style>
+    body {
+      background-color: #f7fafa;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      color: #222;
+    }
+    .container {
+      max-width: 720px;
+      margin: auto;
+      background: white;
+      border-radius: 8px;
+      padding: 20px 30px 40px 30px;
+      box-sizing: border-box;
+    }
+    .banner {
+      width: 100%;
+      max-width: 720px;
+      border-radius: 6px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+      display: block;
+      margin-bottom: 20px;
+      cursor: default; /* не кликабельный */
+    }
+    .lang-switch {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .lang-switch button {
+      font-size: 14px;
+      font-weight: 700;
+      margin: 0 6px;
+      padding: 5px 12px;
+      border: 1px solid #004080;
+      background: white;
+      color: #004080;
+      cursor: pointer;
+      border-radius: 3px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .lang-switch button.active {
+      background-color: #004080;
+      color: white;
+      cursor: default;
+      border-color: #004080;
+    }
+    .lang-switch button:hover:not(.active) {
+      background-color: #e6f0ff;
+    }
+    .product-img {
+      display: block;
+      max-width: 200px;
+      margin: 0 auto 8px auto;
+      cursor: default; /* не кликабельное */
+    }
+    .product-name {
+      font-size: 15px;
+      font-weight: 700;
+      color: #003366;
+      text-align: center;
+      margin-bottom: 4px;
+    }
+    .product-recommendation {
+      font-size: 13px;
+      font-style: italic;
+      color: #003366;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    .content {
+      font-size: 14px;
+      line-height: 1.5;
+      color: #222;
+      margin-bottom: 25px;
+    }
+    .btn-buy {
+      display: block;
+      width: 100%;
+      max-width: 350px;
+      margin: 20px auto 35px auto;
+      padding: 15px 0;
+      background-color: #007bff;
+      color: white;
+      font-weight: 700;
+      font-size: 17px;
+      text-align: center;
+      border-radius: 8px;
+      text-decoration: none;
+      box-shadow: 0 4px 8px rgba(0,123,255,0.5);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      cursor: pointer;
+    }
+    .btn-buy:hover {
+      background-color: #0056b3;
+      transform: scale(1.05);
+    }
+    .footer {
+      border-top: 1px solid #ddd;
+      padding-top: 7px;
+      margin-top: 20px;
+      text-align: center;
+    }
+    .footer-line {
+      font-size: 13px;
+      color: #444;
+      line-height: 1.4;
+      display: block;
+      margin: 0;
+    }
+    .footer a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    .lang-content { display: none; }
+    .lang-content.active { display: block; }
+    /* Нижний кликабельный баннер */
+    .bottom-banner {
+      text-align: center;
+      margin: 30px 0 0 0;
+    }
+    .bottom-banner img {
+      max-width: 720px;
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Верхний баннер без ссылки -->
+    <img src="https://res.cloudinary.com/i19s/image/upload/dpr_auto,f_auto,fl_lossy,q_50,w_auto/v1/prod_creatives/net_253/adv_77651/cr_11e60986-dea0-50ec-a64d-e2f92857ceda" alt="DiveInn Banner" class="banner" />
+
+    <!-- Переключатель языка -->
+    <div class="lang-switch">
+      <button id="btn-ru" class="active">RU</button>
+      <button id="btn-en">EN</button>
+      <button id="btn-lv">LV</button>
+    </div>
+
+    <!-- Фото товара без ссылки -->
+    <img src="https://www.tradeinn.com/f/13676/136761018/scubapro-go-travel-diving-fins.jpg" alt="Scubapro GO Travel Fins" class="product-img" />
+
+    <!-- Название и рекомендация -->
+    <div class="product-name">
+      <span id="prod-name-ru" class="lang-content active">Scubapro GO Travel</span>
+      <span id="prod-name-en" class="lang-content">Scubapro GO Travel</span>
+      <span id="prod-name-lv" class="lang-content">Scubapro GO Travel</span>
+    </div>
+    <div class="product-recommendation">
+      <span id="rec-ru" class="lang-content active">Рекомендовано SSI-инструктором</span>
+      <span id="rec-en" class="lang-content">Recommended by an SSI Instructor</span>
+      <span id="rec-lv" class="lang-content">Iesaka SSI instruktors</span>
+    </div>
+
+    <!-- Тексты по языкам -->
+    <div id="content-ru" class="content lang-content active">
+      Иногда вещи всплывают не только под водой, но и в голове.<br><br>
+      У нас на сафари была пара из Франции. Девушка ныряла стабильно, но без особого энтузиазма. На третий день она попросила поменяться с мужем снаряжением — он как раз взял с собой <strong>белые Scubapro GO Travel</strong>.<br><br>
+      После второго погружения она была другой: смеялась, рассказывала, и чуть ли не прыгала на борт. Она сказала:<br>
+      <em>«Я впервые не чувствовала, что борюсь с водой. Ласты слушаются меня. И они... красивые».</em><br><br>
+      Простая смена ласт изменила всё её впечатление от погружения. Эти ласты легче обычных, компактнее и идеальны для путешествий. Если вы не хотите таскать с собой 3 кг резины — <strong>Scubapro GO Travel</strong> — отличный выбор.<br><br>
+      Особенно для женщин, которые ценят комфорт и лёгкость, а не просто мощь.<br>
+    </div>
+
+    <div id="content-en" class="content lang-content">
+      Sometimes, the difference is felt not just underwater, but in your mind.<br><br>
+      On a safari trip, a French couple joined our group. The woman was diving steadily but without enthusiasm. On the third day, she asked to swap gear with her husband — he happened to have <strong>white Scubapro GO Travel fins</strong>.<br><br>
+      After the second dive, she was a different person: laughing, sharing stories, practically jumping on the boat. She said:<br>
+      <em>"For the first time, I didn't feel like I was fighting the water. The fins obey me. And they are... beautiful."</em><br><br>
+      That simple change transformed her whole diving experience. These fins are lighter than regular ones, more compact, and perfect for travel. If you don’t want to haul 3 kilos of rubber — <strong>Scubapro GO Travel</strong> is a great choice.<br><br>
+      Especially for women who value comfort and ease over just power.<br>
+    </div>
+
+    <div id="content-lv" class="content lang-content">
+      Reizēm lietas uzpeld ne tikai zem ūdens, bet arī galvā.<br><br>
+      Mūsu safarijā pievienojās pāris no Francijas. Sieviete nira stabili, bet bez īpašas aizrautības. Trešajā dienā viņa palūdza samainīties ar vīru ekipējumu — viņam līdzi bija <strong>baltās Scubapro GO Travel pleznas</strong>.<br><br>
+      Pēc otrā ieniriena viņa bija pavisam cita: smējās, dalījās stāstos, burtiski lēca uz klāja. Viņa teica:<br>
+      <em>“Pirmo reizi nejutu, ka cīnos ar ūdeni. Pleznas klausīja mani. Un tās ir... skaistas.”</em><br><br>
+      Tik vienkārša maiņa pilnībā izmainīja viņas niršanas iespaidu. Šīs pleznas ir vieglākas par parastajām, kompaktas un ideāli piemērotas ceļošanai. Ja negribat nest līdzi 3 kg gumijas — <strong>Scubapro GO Travel</strong> ir lieliska izvēle.<br><br>
+      It īpaši sievietēm, kuras novērtē komfortu un vieglumu, nevis tikai jaudu.<br>
+    </div>
+
+    <!-- Кнопка -->
+    <a id="buy-btn" href="https://tnkdbf.tradeinn.com/ts/i5534887/tsc?typ=r&amc=con.blbn.524297.533805.14119786&smc=review-gofin_white&rmd=3&trg=https%3A%2F%2Fwww.tradeinn.com%2Fdiveinn%2Fen%2Fscubapro-go-travel-diving-fins%2F136761018%2Fp"
+       target="_blank" class="btn-buy" onclick="onBuyClick();">
+      Узнать стоимость
+    </a>
+
+    <!-- Нижний кликабельный баннер -->
+    <div class="bottom-banner">
+      <a href="https://tnkdbf.tradeinn.com/ts/i5534887/tsc?typ=r&amc=con.blbn.524297.533805.14119786&smc=review-gofin_white&rmd=3&trg=https%3A%2F%2Fwww.tradeinn.com%2Fdiveinn%2Fen%2Fscubapro-go-travel-diving-fins%2F136761018%2Fp"
+         target="_blank" rel="sponsored" onclick="fbq('track', 'Lead'); fbq('trackCustom', 'Checkout_DiveInn');">
+        <img src="https://res.cloudinary.com/i19s/image/upload/dpr_auto,f_auto,fl_lossy,q_50,w_auto/v1/prod_creatives/net_253/adv_77651/cr_11e60986-dea0-50ec-a64d-e2f92857ceda" alt="DiveInn Banner" />
+      </a>
+    </div>
+
+    <!-- Подпись -->
+    <div class="footer">
+      <!-- RU -->
+      <span id="footer-line1-ru" class="footer-line lang-content active">
+        © <strong><a href="https://puziryov.com" target="_blank" rel="noopener noreferrer" style="color:#007bff; text-decoration:none;">#ВиталийПузырёв</a>, инструктор-тренер SSI</strong>
+      </span>
+      <span id="footer-line2-ru" class="footer-line lang-content active">
+        Основатель проекта <a href="https://iscuba.online" target="_blank" rel="noopener noreferrer">iScuba Online</a>
+      </span>
+      <!-- EN -->
+      <span id="footer-line1-en" class="footer-line lang-content">
+        © <strong><a href="https://puziryov.com" target="_blank" rel="noopener noreferrer" style="color:#007bff; text-decoration:none;">#Vitaliy Puziryov</a>, SSI Instructor Trainer</strong>
+      </span>
+      <span id="footer-line2-en" class="footer-line lang-content">
+        Founder of <a href="https://iscuba.online" target="_blank" rel="noopener noreferrer">iScuba Online</a>
+      </span>
+      <!-- LV -->
+      <span id="footer-line1-lv" class="footer-line lang-content">
+        © <strong><a href="https://puziryov.com" target="_blank" rel="noopener noreferrer" style="color:#007bff; text-decoration:none;">#Vitaliy Puziryov</a>, SSI instruktors-treneris</strong>
+      </span>
+      <span id="footer-line2-lv" class="footer-line lang-content">
+        Projekta <a href="https://iscuba.online" target="_blank" rel="noopener noreferrer">iScuba Online</a> dibinātājs
+      </span>
+    </div>
+
+  </div>
+
+<script>
+  const btnRu = document.getElementById('btn-ru');
+  const btnEn = document.getElementById('btn-en');
+  const btnLv = document.getElementById('btn-lv');
+
+  function setButtons(active) {
+    [btnRu, btnEn, btnLv].forEach(b => b.classList.remove('active'));
+    if (active === 'ru') btnRu.classList.add('active');
+    if (active === 'en') btnEn.classList.add('active');
+    if (active === 'lv') btnLv.classList.add('active');
+  }
+
+  function showLang(lang) {
+    // все языковые блоки скрыть
+    ['ru','en','lv'].forEach(l => {
+      document.getElementById('content-' + l).classList.remove('active');
+      document.getElementById('prod-name-' + l).classList.remove('active');
+      document.getElementById('rec-' + l).classList.remove('active');
+      const f1 = document.getElementById('footer-line1-' + l);
+      const f2 = document.getElementById('footer-line2-' + l);
+      if (f1) f1.classList.remove('active');
+      if (f2) f2.classList.remove('active');
+    });
+
+    // показать выбранный язык
+    document.getElementById('content-' + lang).classList.add('active');
+    document.getElementById('prod-name-' + lang).classList.add('active');
+    document.getElementById('rec-' + lang).classList.add('active');
+    const f1 = document.getElementById('footer-line1-' + lang);
+    const f2 = document.getElementById('footer-line2-' + lang);
+    if (f1) f1.classList.add('active');
+    if (f2) f2.classList.add('active');
+
+    // обновить кнопку CTA
+    const btn = document.getElementById('buy-btn');
+    if (lang === 'ru') btn.textContent = 'Узнать стоимость';
+    if (lang === 'en') btn.textContent = 'Check price';
+    if (lang === 'lv') btn.textContent = 'Uzzināt cenu';
+  }
+
+  function activateLang(lang) {
+    setButtons(lang);
+    showLang(lang);
+  }
+
+  btnRu.addEventListener('click', () => activateLang('ru'));
+  btnEn.addEventListener('click', () => activateLang('en'));
+  btnLv.addEventListener('click', () => activateLang('lv'));
+
+  // Изначальное состояние
+  activateLang('ru');
+
+  // Отслеживание задержанного просмотра страницы (7 секунд)
+  setTimeout(() => {
+    fbq('trackCustom', 'ViewContent_Equip_Review_7s');
+  }, 7000);
+
+  // Обработчик клика по кнопке
+  function onBuyClick() {
+    fbq('track', 'Lead');
+    fbq('trackCustom', 'Checkout_DiveInn');
+  }
+</script>
+</body>
+</html>
