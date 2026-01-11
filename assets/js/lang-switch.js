@@ -1,4 +1,4 @@
-const btnRu = document.getElementById('btn-ru');
+  const btnRu = document.getElementById('btn-ru');
   const btnEn = document.getElementById('btn-en');
   const btnLv = document.getElementById('btn-lv');
 
@@ -48,15 +48,3 @@ const btnRu = document.getElementById('btn-ru');
 
   // Изначальное состояние
   activateLang('ru');
-
-  // Отслеживание задержанного просмотра страницы (7 секунд)
-  setTimeout(() => {
-    fbq('trackCustom', 'ViewContent_Equip_Review_7s');
-  }, 7000);
-
-  // Обработчик клика по кнопке
-  function onBuyClick() {
-    fbq('track', 'Lead');
-    fbq('trackCustom', 'Checkout_DiveInn');
-  }
-
